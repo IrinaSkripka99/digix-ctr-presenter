@@ -1,14 +1,53 @@
-import { Divider, Row, Typography } from "antd";
-import React from "react";
+import { Col, Divider, Row, Select, Table, Typography } from "antd";
+import React, { useState } from "react";
+import RandomForest from "./forest";
+import Keras from "./keras";
+import LogisticRegression from "./logistic";
+import SGD from "./sgd";
+import dataSource from "./stacking";
+import lightData from "./light_gbm";
+import descTree from "./desc_tree";
+import xgbData from "./xgb";
 
 const { Text } = Typography;
+const { Option } = Select;
+const columns = [
+  {
+    title: "id",
+    dataIndex: "id",
+  },
+  {
+    title: "Actual",
+    dataIndex: "Actual",
+  },
+  {
+    title: "Predicted",
+    dataIndex: "Predicted",
+  },
+];
 
 const PredictionView = () => {
+  const [testSize, setTestSize] = useState(0.25);
+
+  const handleChange = (value) => {
+    setTestSize(value);
+  };
+
   return (
     <div>
       <h2 style={{ textAlign: "center", color: "darkslateblue" }}>
         Prediction
       </h2>
+      <p>test size</p>
+      <Select
+        defaultValue={testSize}
+        style={{ width: 120 }}
+        onChange={handleChange}
+      >
+        <Option value="0.25">0.25</Option>
+        <Option value="0.3">0.3</Option>
+        <Option value="0.45">0.45</Option>
+      </Select>
       <Divider orientation="left">What is regression analysis?</Divider>
       <Row>
         <p>
@@ -21,40 +60,54 @@ const PredictionView = () => {
           Regression analysis can be used for three things:
         </p>
       </Row>
-      <Divider orientation="left">Logistic regression</Divider>
-      <p>
-        Logistic regression is the correct type of analysis to use when you’re
-        working with binary data. You know you’re dealing with binary data when
-        the output or dependent variable is dichotomous or categorical in
-        nature; in other words, if it fits into one of two categories (such as
-        “yes” or “no”, “pass” or “fail”, and so on).
-      </p>
-      <h4>Confusion matrix</h4>
-      {/* <img src={lg_matrix} width={380} height={300} /> */}
-      <div>
-        <Text style={{ fontSize: "16px" }} type="success">
-          Accuracy of model: 0.66
-        </Text>
-      </div>
-      <Divider orientation="left">SGD with Logistic regression</Divider>
-      <p>
-        Stochastic gradient descent (often abbreviated SGD) is an iterative
-        method for optimizing an objective function with suitable smoothness
-        properties (e.g. differentiable or subdifferentiable). It can be
-        regarded as a stochastic approximation of gradient descent optimization,
-        since it replaces the actual gradient (calculated from the entire data
-        set) by an estimate thereof (calculated from a randomly selected subset
-        of the data). Especially in high-dimensional optimization problems this
-        reduces the computational burden, achieving faster iterations in trade
-        for a lower convergence rate.
-      </p>
-      <h4>Confusion matrix</h4>
-      {/* <img src={sgd_matrix} width={380} height={300} /> */}
-      <div>
-        <Text style={{ fontSize: 16 }} type="success">
-          Accuracy of model: 0.85
-        </Text>
-      </div>
+      <LogisticRegression />
+      <SGD />
+      <RandomForest />
+      <Divider orientation="left">Decision tree</Divider>
+      <Row>
+        <Col span={12}>
+          <Table columns={columns} size="small" dataSource={descTree} />
+        </Col>
+        <Col span={12}>
+          <Text style={{ fontSize: 16, marginLeft: 100 }} type="success">
+            Accuracy of model: 0.8349
+          </Text>
+        </Col>
+      </Row>
+      <Divider orientation="left">XGBoost</Divider>
+      <Row>
+        <Col span={12}>
+          <Table columns={columns} size="small" dataSource={xgbData} />
+        </Col>
+        <Col span={12}>
+          <Text style={{ fontSize: 16, marginLeft: 100 }} type="success">
+            Accuracy of model: 0.5893
+          </Text>
+        </Col>
+      </Row>
+      <Divider orientation="left">LightGBM</Divider>
+      <Row>
+        <Col span={12}>
+          <Table columns={columns} size="small" dataSource={lightData} />
+        </Col>
+        <Col span={12}>
+          <Text style={{ fontSize: 16, marginLeft: 100 }} type="success">
+            Accuracy of model: 0.6202
+          </Text>
+        </Col>
+      </Row>
+      <Keras />
+      <Divider orientation="left">Stacking</Divider>
+      <Row>
+        <Col span={12}>
+          <Table columns={columns} size="small" dataSource={dataSource} />
+        </Col>
+        <Col span={12}>
+          <Text style={{ fontSize: 16, marginLeft: 100 }} type="success">
+            Accuracy of model: 0.98
+          </Text>
+        </Col>
+      </Row>
     </div>
   );
 };
