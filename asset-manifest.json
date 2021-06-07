@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/digix-ctr-presenter/static/css/main.7b9f8a7b.chunk.css",
-    "main.js": "/digix-ctr-presenter/static/js/main.54edc0ca.chunk.js",
-    "main.js.map": "/digix-ctr-presenter/static/js/main.54edc0ca.chunk.js.map",
+    "main.js": "/digix-ctr-presenter/static/js/main.2f61ed2f.chunk.js",
+    "main.js.map": "/digix-ctr-presenter/static/js/main.2f61ed2f.chunk.js.map",
     "runtime-main.js": "/digix-ctr-presenter/static/js/runtime-main.528fdce4.js",
     "runtime-main.js.map": "/digix-ctr-presenter/static/js/runtime-main.528fdce4.js.map",
     "static/css/2.00bb4513.chunk.css": "/digix-ctr-presenter/static/css/2.00bb4513.chunk.css",
@@ -91,6 +91,6 @@
     "static/css/2.00bb4513.chunk.css",
     "static/js/2.fa42c055.chunk.js",
     "static/css/main.7b9f8a7b.chunk.css",
-    "static/js/main.54edc0ca.chunk.js"
+    "static/js/main.2f61ed2f.chunk.js"
   ]
 }
