@@ -1,4 +1,4 @@
-export default [
+export const summary = [
   {
     count: "label",
     mean: 41907133,

@@ -40,6 +40,7 @@ const AnalysisVariablesView = () => {
                 <h3>Analyze {item}</h3>
                 <div>
                   <img
+                    alt="count"
                     src={constants[`${item}_count`]}
                     width={400}
                     height={300}
@@ -47,6 +48,7 @@ const AnalysisVariablesView = () => {
                 </div>
                 <div>
                   <img
+                    alt="ctr"
                     src={constants[`${item}_ctr`]}
                     width={400}
                     height={300}
@@ -54,6 +56,7 @@ const AnalysisVariablesView = () => {
                 </div>
                 <div>
                   <img
+                    alt="click"
                     src={constants[`${item}_click`]}
                     width={400}
                     height={300}

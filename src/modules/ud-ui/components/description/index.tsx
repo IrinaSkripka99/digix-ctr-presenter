@@ -1,14 +1,13 @@
 import React from "react";
 import { columns } from "../../constants";
-import train_fields from "../../../../data/train_fields";
-import test_fields from "../../../../data/test_fields";
+import { train_fields } from "../../../../data/train_fields";
+import { test_fields } from "../../../../data/test_fields";
 import descr from "./img/descr.png";
 import { Divider, Row, Col, Tabs, Table } from "antd";
 
 const { TabPane } = Tabs;
 
 const DescriptionView = () => {
-  
   return (
     <>
       <h2 style={{ textAlign: "center", color: "darkslateblue" }}>
@@ -23,7 +22,7 @@ const DescriptionView = () => {
         CTR prediction models. The aim of the event is to find talented
         individuals to promote the development of Advertisement CTR prediction
         algorithms.
-        <a href="https://www.youtube.com/watch?v=9dmLxMNgCGM" target="_blank">
+        <a href="https://www.youtube.com/watch?v=9dmLxMNgCGM">
           <i> more</i>
         </a>
       </p>

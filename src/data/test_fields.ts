@@ -1,4 +1,4 @@
-export default [
+export const test_fields = [
   {
     field: "label",
     description: "Label",

@@ -53,9 +53,9 @@ const MainView = () => {
           }}
         >
           <Switch>
-            <Route exact path="/" component={DescriptionView} />
-            <Route path="/analysis" component={AnalysisView} />
-            <Route path="/prediction" component={PredictionView} />
+            <Route exact path="/digix-ctr-presenter" component={DescriptionView} />
+            <Route path="/digix-ctr-presenter/analysis" component={AnalysisView} />
+            <Route path="/digix-ctr-presenter/prediction" component={PredictionView} />
             <Route render={() => <p>Page not found</p>} />
           </Switch>
         </Content>

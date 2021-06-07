@@ -23,15 +23,15 @@ const LeftMenu = () => {
       </S.Logo>
       <S.MenuItem key="/" icon={<MailOutlined />}>
         General information
-        <Link to="/" />
+        <Link to="/digix-ctr-presenter/" />
       </S.MenuItem>
       <S.MenuItem key="/analysis" icon={<AppstoreOutlined />}>
         Analysis
-        <Link to="/analysis" />
+        <Link to="/digix-ctr-presenter/analysis" />
       </S.MenuItem>
       <S.MenuItem key="/prediction" icon={<SettingOutlined />}>
         Prediction
-        <Link to="/prediction" />
+        <Link to="/digix-ctr-presenter/prediction" />
       </S.MenuItem>
     </Menu>
   );

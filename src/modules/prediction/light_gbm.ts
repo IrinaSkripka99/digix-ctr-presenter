@@ -1,4 +1,4 @@
-export default [
+export const lightData =[
   {
     id: 8040,
     Actual: 0,

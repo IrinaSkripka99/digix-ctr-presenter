@@ -90,7 +90,7 @@ import up_membership_grade_count from "../variables/up_membership_grade/img/coun
 import up_membership_grade_ctr from "../variables/up_membership_grade/img/ctr.png";
 import up_membership_grade_click from "../variables/up_membership_grade/img/click.png";
 
-export default {
+const constants = {
   age_count,
   age_click,
   age_ctr,
@@ -161,3 +161,4 @@ export default {
   app_first_class_count,
   app_first_class_ctr,
 };
+export default constants;

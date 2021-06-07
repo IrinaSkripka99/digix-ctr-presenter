@@ -1,4 +1,4 @@
-export default [
+export const stackingData = [
   {
     "id": 8040,
     "Actual": 0,

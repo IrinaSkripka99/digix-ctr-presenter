@@ -1,7 +1,7 @@
 import { Alert, Collapse, Divider, Table } from "antd";
 import React from "react";
-import summary from "../../../../data/summary";
-import summary2 from "../../../../data/summary2";
+import { summary } from "../../../../data/summary";
+import { summary2 } from "../../../../data/summary2";
 import { summaryColumns } from "../../../ud-ui/constants";
 const { Panel } = Collapse;
 

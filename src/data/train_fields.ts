@@ -1,4 +1,4 @@
-export default [
+export const train_fields = [
   {
     field: "id",
     description: "Row number",

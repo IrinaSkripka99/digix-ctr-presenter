@@ -4,10 +4,10 @@ import RandomForest from "./forest";
 import Keras from "./keras";
 import LogisticRegression from "./logistic";
 import SGD from "./sgd";
-import dataSource from "./stacking";
-import lightData from "./light_gbm";
-import descTree from "./desc_tree";
-import xgbData from "./xgb";
+import { stackingData as dataSource } from "./stacking";
+import { lightData } from "./light_gbm";
+import { descTree } from "./desc_tree";
+import { xgbData } from "./xgb";
 
 const { Text } = Typography;
 const { Option } = Select;
