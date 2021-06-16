@@ -18,9 +18,9 @@ const LeftMenu = () => {
       defaultSelectedKeys={["/"]}
       mode="inline"
     >
-      <S.Logo>
+      {/* <S.Logo>
         <img src={logo} width="70" height="70" alt="logo" />
-      </S.Logo>
+      </S.Logo> */}
       <S.MenuItem key="/" icon={<MailOutlined />}>
         General information
         <Link to="/digix-ctr-presenter/" />

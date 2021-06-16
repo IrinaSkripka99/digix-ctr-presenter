@@ -16,7 +16,7 @@ const RandomForest = () => {
   };
   return (
     <>
-      <Divider orientation="left">Random Forest</Divider>
+      <Divider orientation="left">Decision tree</Divider>
       <Row>
         <Col span={12}>
           <h4>class_weight</h4>
@@ -51,12 +51,6 @@ const RandomForest = () => {
           Accuracy of model: {constants[classWeight]}
         </Text>
       </div>
-      {/* 
-      <div>
-        <Text style={{ fontSize: 16 }} type="success">
-          Accuracy of model: 0.6137
-        </Text>
-      </div> */}
     </>
   );
 };
