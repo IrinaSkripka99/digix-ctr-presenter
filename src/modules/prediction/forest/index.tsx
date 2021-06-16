@@ -48,13 +48,13 @@ const RandomForest = () => {
       </Row>
       <div style={{ paddingTop: 25 }}>
         <Text style={{ fontSize: 16 }} type="success">
-          Accuracy of model: {constants[classWeight]}
+          Evaluating the model: {constants[classWeight]}
         </Text>
       </div>
       {/* 
       <div>
         <Text style={{ fontSize: 16 }} type="success">
-          Accuracy of model: 0.6137
+          Evaluating the model: 0.6137
         </Text>
       </div> */}
     </>

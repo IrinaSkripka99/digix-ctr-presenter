@@ -103,7 +103,7 @@ const LogisticRegression = () => {
           </Text>
         ) : (
           <Text style={{ fontSize: "16px" }} type="success">
-            {`Accuracy of model: ${accuracy}`}
+            {`Evaluating the model: ${accuracy}`}
           </Text>
         )}
       </div>

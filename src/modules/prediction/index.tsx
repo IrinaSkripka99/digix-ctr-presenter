@@ -36,26 +36,26 @@ const PredictionView = () => {
       <Divider orientation="left">Decision tree</Divider>
       <Row>
         <Text style={{ fontSize: 16 }} type="success">
-          Accuracy of model: 0.8349
+          Evaluating the model: 0.8349
         </Text>
       </Row>
       <Divider orientation="left">XGBoost</Divider>
       <Row>
         <Text style={{ fontSize: 16 }} type="success">
-          Accuracy of model: 0.5893
+          Evaluating the model: 0.5893
         </Text>
       </Row>
       <Divider orientation="left">LightGBM</Divider>
       <Row>
         <Text style={{ fontSize: 16 }} type="success">
-          Accuracy of model: 0.6202
+          Evaluating the model: 0.6202
         </Text>
       </Row>
       <Keras />
       <Divider orientation="left">Stacking</Divider>
       <Row>
         <Text style={{ fontSize: 16 }} type="success">
-          Accuracy of model: 0.92
+          Evaluating the model: 0.92
         </Text>
       </Row>
     </div>

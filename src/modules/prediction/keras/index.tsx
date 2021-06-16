@@ -35,7 +35,7 @@ const Keras = () => {
       </Select>
       <div>
         <Text style={{ fontSize: 16 }} type="success">
-          Accuracy of model: {constants[epoch]}
+          Evaluating the model: {constants[epoch]}
         </Text>
       </div>
     </>

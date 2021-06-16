@@ -37,7 +37,7 @@ const SGD = () => {
       </Row>
       <div style={{ paddingTop: 25 }}>
         <Text style={{ fontSize: 16 }} type="success">
-          Accuracy of model: {constants[classWeight]}
+          Evaluating the model: {constants[classWeight]}
         </Text>
       </div>
     </>
