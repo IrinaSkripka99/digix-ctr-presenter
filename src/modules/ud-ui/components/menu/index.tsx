@@ -1,12 +1,11 @@
 import {
   AppstoreOutlined,
   MailOutlined,
-  SettingOutlined,
+  SettingOutlined
 } from "@ant-design/icons";
 import { Menu } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./img/logo.png";
 import * as S from "./style";
 
 const LeftMenu = () => {
@@ -18,9 +17,6 @@ const LeftMenu = () => {
       defaultSelectedKeys={["/"]}
       mode="inline"
     >
-      {/* <S.Logo>
-        <img src={logo} width="70" height="70" alt="logo" />
-      </S.Logo> */}
       <S.MenuItem key="/" icon={<MailOutlined />}>
         General information
         <Link to="/digix-ctr-presenter/" />

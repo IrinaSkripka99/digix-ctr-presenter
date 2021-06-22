@@ -1,12 +1,35 @@
-import { Col, Divider, Row, Select, Typography } from "antd";
+import { Col, Divider, Row, Select, Table, Typography } from "antd";
 import React, { useState } from "react";
+import { forest_1 } from "./forest_1";
+import { forest_2 } from "./forest_2";
 
 const { Text } = Typography;
 const { Option } = Select;
 
+const columns = [
+  {
+    title: "id",
+    dataIndex: "id",
+  },
+  {
+    title: "Actual",
+    dataIndex: "Actual",
+  },
+  {
+    title: "Predicted",
+    dataIndex: "Predicted",
+  },
+];
+
 const constants = {
-  balanced: 0.61,
-  balanced_subsample: 0.9,
+  balanced: {
+    accuracy: 0.61,
+    data: forest_1,
+  },
+  balanced_subsample: {
+    accuracy: 0.67,
+    data: forest_2,
+  },
 };
 
 const RandomForest = () => {
@@ -46,17 +69,20 @@ const RandomForest = () => {
           </Select>
         </Col>
       </Row>
-      <div style={{ paddingTop: 25 }}>
-        <Text style={{ fontSize: 16 }} type="success">
-          Evaluating the model: {constants[classWeight]}
-        </Text>
-      </div>
-      {/* 
-      <div>
-        <Text style={{ fontSize: 16 }} type="success">
-          Evaluating the model: 0.6137
-        </Text>
-      </div> */}
+      <Row>
+        <Col span={12}>
+          <Table
+            columns={columns}
+            size="small"
+            dataSource={constants[classWeight].data}
+          />
+        </Col>
+        <Col span={12}>
+          <Text style={{ fontSize: 16, marginLeft: 100 }} type="success">
+            Evaluating the model: {constants[classWeight].accuracy}
+          </Text>
+        </Col>
+      </Row>
     </>
   );
 };

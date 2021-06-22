@@ -1,12 +1,35 @@
-import { Col, Divider, Row, Select, Typography } from "antd";
+import { Col, Divider, Row, Select, Table, Typography } from "antd";
 import React, { useState } from "react";
+import { sgd_1 } from "./sgd_1";
+import { sgd_2 } from "./sgd_2";
 
 const { Text } = Typography;
 const { Option } = Select;
 
+const columns = [
+  {
+    title: "id",
+    dataIndex: "id",
+  },
+  {
+    title: "Actual",
+    dataIndex: "Actual",
+  },
+  {
+    title: "Predicted",
+    dataIndex: "Predicted",
+  },
+];
+
 const constants = {
-  balanced: 0.85,
-  none: 0.99,
+  balanced: {
+    accuracy: 0.85,
+    data: sgd_1,
+  },
+  none: {
+    accuracy: 0.99,
+    data: sgd_2,
+  },
 };
 
 const SGD = () => {
@@ -35,11 +58,20 @@ const SGD = () => {
           </Select>
         </Col>
       </Row>
-      <div style={{ paddingTop: 25 }}>
-        <Text style={{ fontSize: 16 }} type="success">
-          Evaluating the model: {constants[classWeight]}
-        </Text>
-      </div>
+      <Row>
+        <Col span={12}>
+          <Table
+            columns={columns}
+            size="small"
+            dataSource={constants[classWeight].data}
+          />
+        </Col>
+        <Col span={12}>
+          <Text style={{ fontSize: 16, marginLeft: 100 }} type="success">
+            Evaluating the model: {constants[classWeight].accuracy}
+          </Text>
+        </Col>
+      </Row>
     </>
   );
 };
